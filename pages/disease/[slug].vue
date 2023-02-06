@@ -8,9 +8,7 @@
       <img class="w-full"  :src="useRuntimeConfig().imageUrl+'disease/' +diseaseInfo.diseaseimage" alt="Mountain">
       <div class="px-6 py-4">
         <div class="font-bold text-xl mb-2">{{ diseaseInfo.diseasename }}</div>
-        <p class="text-gray-700 text-base">
-          <div  v-html="diseaseInfo.description"></div>
-        </p>
+          <div class="text-gray-700 text-base" v-html="diseaseInfo.description"></div>
       </div>
       <div class="px-6 pt-4 pb-2">
         <NuxtLink class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" :to="`/disease/${diseaseInfo.slug}`">
@@ -35,7 +33,7 @@
      
       
     });
-       const diseaseInfo = await useFetch(useRuntimeConfig().baseUrl+`/disease/${useRoute().params.slug}`).then((diseaseInfo) => {
+       const diseaseInfo = await useFetch(useRuntimeConfig().baseUrl+`/disease/${encodeURI(useRoute().params.slug)}`).then((diseaseInfo) => {
      return diseaseInfo.data.value.disease
    
     });
