@@ -1,7 +1,7 @@
 <template>
 
 <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm m-auto">
-  <form @submit.prevent="updateProfile">
+
     <div class="form-group mb-6">
       <label for="exampleInputEmail2" class="form-label inline-block mb-2 text-gray-700">Email address</label>
       <input type="email" class="form-control
@@ -71,7 +71,22 @@
     <p class="text-gray-800 mt-6 text-center">Not a member? <a href="#!"
         class="text-blue-600 hover:text-blue-700 focus:text-blue-700 transition duration-200 ease-in-out">Register</a>
     </p>
-  </form>
+  
 </div>
 
 </template>
+<script setup>
+
+useHead({  title: 'Homeo BD', 
+ meta: [    { name: 'description', content: 'Homeo BD' }  ], 
+  bodyAttrs: {    class: 'Index'  }, 
+  
+});
+   const homeInfo = await useFetch(useRuntimeConfig().baseUrl+'/index').then((homeInfo) => {
+return homeInfo.data.value
+});
+
+
+</script>
+
+

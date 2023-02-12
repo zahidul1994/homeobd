@@ -1,3 +1,3 @@
-export default defineNuxtRouteMiddleware((to,form)=>{
-// console.log(to,form)
+export default defineNuxtRouteMiddleware((to, from) => {
+
 })

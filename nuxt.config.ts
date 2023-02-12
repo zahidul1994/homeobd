@@ -1,18 +1,17 @@
 
 export default defineNuxtConfig({
   devServerHandlers: [],
-  // components: true,
+  //  components: true,
     app: {
       head: {
         charset: 'utf-8',
         viewport: 'width=500, initial-scale=1',
         title: 'Homeo BD',
         meta: [
-          // <meta name="description" content="My amazing site">
-          { name: 'description', content: 'First Bangla Homeo Software' }
+         { name: 'description', content: 'First Bangla Homeo Software' }
         ],
       },
-       pageTransition: { name: 'page', mode: 'out-in' }  ,
+      
     },
 
   

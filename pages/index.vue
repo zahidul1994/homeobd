@@ -33,7 +33,9 @@
 </div><!--Card 1-->
 </template>
 <script setup>
-
+definePageMeta({
+  layout:'default'
+})
 useHead({  title: 'Homeo BD', 
  meta: [    { name: 'description', content: 'Homeo BD' }  ], 
   bodyAttrs: {    class: 'Index'  }, 
