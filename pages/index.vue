@@ -1,9 +1,9 @@
 <template>
 
 <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 gap-1">
-  <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" v-for="dise in homeInfo.diseasesInfo[0]">
+  <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md shadow dark:bg-gray-800 dark:border-gray-700" v-for="dise in homeInfo.diseasesInfo[0]">
     <NuxtLink :to="`/disease/${dise.slug}`">
-        <img class="rounded-t-lg" :src="useRuntimeConfig().imageUrl+'disease/' +dise.diseaseimage"  :alt="dise.diseasename"  />
+        <nuxt-img format="webp" loading="lazy" class="max-w-full h-auto" :src="useRuntimeConfig().imageUrl+'disease/' +dise.diseaseimage"  :alt="dise.diseasename"  />
     </NuxtLink>
     <div class="p-5">
       <NuxtLink :to="`/disease/${dise.slug}`">
@@ -15,13 +15,11 @@
         </NuxtLink>
     </div>
   </div>
-</div><!--Card 1-->
 
 
-<div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6 gap-1">
-  <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" v-for="dise in homeInfo.medicineInfo">
+  <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md  shadow dark:bg-gray-800 dark:border-gray-700" v-for="dise in homeInfo.medicineInfo">
     <NuxtLink :to="`/disease/${dise.slug}`">
-        <img class="rounded-t-lg" :src="useRuntimeConfig().imageUrl+'medicine/' +dise.medicineimage"  :alt="dise.diseasename"  />
+        <nuxt-img format="webp" loading="lazy" class="max-w-full h-auto" :src="useRuntimeConfig().imageUrl+'medicine/' +dise.medicineimage"  :alt="dise.diseasename"  />
     </NuxtLink>
     <div class="p-5">
       <NuxtLink :to="`/disease/${dise.slug}`">

@@ -1,7 +1,7 @@
 
 export default defineNuxtConfig({
   devServerHandlers: [],
-  //  components: true,
+    components: true,
     app: {
       head: {
         charset: 'utf-8',
@@ -29,7 +29,7 @@ assets:"/<rootDir></rootDir>"
     
   
         modules: [
-          // '@nuxtjs/moment'
+          '@nuxt/image-edge',
         ],
         build: {
           transpile: ['vform']
