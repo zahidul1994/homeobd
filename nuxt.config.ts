@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     app: {
       head: {
         charset: 'utf-8',
-        viewport: 'width=500, initial-scale=1',
+        viewport: 'width=device-width, initial-scale=1',
         title: 'Homeo BD',
         meta: [
          { name: 'description', content: 'First Bangla Homeo Software' }
@@ -30,6 +30,12 @@ assets:"/<rootDir></rootDir>"
   
         modules: [
           '@nuxt/image-edge',
+          '@pinia/nuxt',
+          ['@sidebase/nuxt-auth',{
+            isEnabled: true,
+          }
+            
+          ]
         ],
         build: {
           transpile: ['vform']
