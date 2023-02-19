@@ -1,7 +1,7 @@
 <template>
   <div class="lg:container lg:mx-auto">
     <NavBar />
-    <slot />
+    <slot></slot>
     <!-- <Footer /> -->
 
     <div class=" bg-gray-900">
@@ -39,9 +39,3 @@
 
 </div>
 </template>
-<script setup lang="ts">
-definePageMeta({ 
-  layoutTransition: {  
-        name: 'slide-in'  
-        }})
-   </script>

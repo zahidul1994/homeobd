@@ -9,7 +9,6 @@
   },
   "devDependencies": {
     "@nuxt/image-edge": "^1.0.0-27919678.2f5b64b",
-    "@sidebase/nuxt-auth": "^0.4.1",
     "autoprefixer": "^10.4.13",
     "nuxt": "^3.0.0",
     "postcss": "^8.4.21",
@@ -18,12 +17,9 @@
   "dependencies": {
     "@pinia/nuxt": "^0.4.6",
     "defu": "^6.1.2",
-    "pinia": "^2.0.30",
-    "v3-infinite-loading": "^1.2.2",
-    "vform": "^2.1.2"
-  },
+   "v3-infinite-loading": "^1.2.2"
+    },
   "overrides": {
     "vue": "latest"
   }
-  
 }

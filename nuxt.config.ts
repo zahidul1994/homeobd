@@ -30,15 +30,10 @@ assets:"/<rootDir></rootDir>"
   
         modules: [
           '@nuxt/image-edge',
-          '@pinia/nuxt',
-          ['@sidebase/nuxt-auth',{
-            isEnabled: true,
-          }
-            
-          ]
+          '@pinia/nuxt'
         ],
         build: {
-          transpile: ['vform']
+         
       },
         runtimeConfig: {
           
