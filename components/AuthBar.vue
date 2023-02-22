@@ -23,12 +23,12 @@
         <!-- Navbar -->
         <div class="hidden md:block">
           <ul class="flex space-x-8 text-sm font-sans">
-            <li><NuxtLink to="/" class="border-b-2 border-blue-500 pb-1" >হোম</NuxtLink></li>
-            <li><NuxtLink to="disease" class="border-b-2 border-blue-500 pb-1">ব্যাধি</NuxtLink></li>
-            <li><NuxtLink to="medicine" class="border-b-2 border-blue-500 pb-1">ঔষধ</NuxtLink></li>
-            <li><NuxtLink to="symptom" class="border-b-2 border-blue-500 pb-1" >উপসর্গ</NuxtLink></li>
-            <li><NuxtLink to="login" class="border-b-2 border-blue-500 pb-1" >লগইন</NuxtLink></li>
-            <li><NuxtLink to="sign-up" class="cta bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded text-white font-semibold">সাইন আপ</NuxtLink></li>
+            <li><NuxtLink to="/" class="active border-b-2 border-blue-500 pb-1">হোম</NuxtLink></li>
+            <li><NuxtLink to="/doctor/find-disease" class="">ব্যাধি</NuxtLink></li>
+            <li><NuxtLink to="/doctor/find-medicine" class="">ঔষধ</NuxtLink></li>
+            <li><NuxtLink to="/doctor/find-symptom" class="">উপসর্গ</NuxtLink></li>
+         <li><NuxtLink to="/doctor/prescription"> প্রেসক্রিপশন</NuxtLink></li>
+            <li><NuxtLink to="/" class="cta bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded text-white font-semibold">লগ আউট</NuxtLink></li>
           </ul>
         </div>
   
@@ -66,12 +66,13 @@
           </span>
   
           <ul class="divide-y font-sans">
-            <li><NuxtLink to="/"  @click="isOpen = false" class="my-4 inline-block">হোম</NuxtLink></li>
-            <li><NuxtLink to="/disease" @click="isOpen = false" class="my-4 inline-block">ব্যাধি</NuxtLink></li>
-            <li><NuxtLink to="/medicine" @click="isOpen = false" class="my-4 inline-block">ঔষধ</NuxtLink></li>
-            <li><NuxtLink to="/symptom" @click="isOpen = false" class="my-4 inline-block">উপসর্গ</NuxtLink></li>
-            <li><NuxtLink to="/login" @click="isOpen = false" class="my-4 inline-block">লগইন</NuxtLink></li>
-            <li><NuxtLink to="/" @click="isOpen = false" class="my-8 w-full text-center font-semibold cta inline-block bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded text-white">সাইন আপ</NuxtLink></li>
+            <li><NuxtLink to="/" @click="isOpen = false"  class="active border-b-2 border-blue-500 pb-1">হোম</NuxtLink></li>
+            <li><NuxtLink to="/doctor/find-disease" @click="isOpen = false" class="my-4 inline-block">ব্যাধি</NuxtLink></li>
+            <li><NuxtLink to="/doctor/find-medicine" @click="isOpen = false" class="my-4 inline-block">ঔষধ</NuxtLink></li>
+            <li><NuxtLink to="/doctor/find-symptom" @click="isOpen = false" class="my-4 inline-block">উপসর্গ</NuxtLink></li>
+         <li><NuxtLink to="/doctor/prescription" @click="isOpen = false" class="my-4 inline-block"> প্রেসক্রিপশন</NuxtLink></li>
+            <li><NuxtLink to="/" class="my-4 inline-block">লগ আউট</NuxtLink></li>
+            
           </ul>
   
   
@@ -114,4 +115,6 @@
 
 
   </script>
- 
+  <style scoped>
+  .nuxt-link-active {  color: red;}
+  </style>

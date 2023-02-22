@@ -42,7 +42,6 @@ assets:"/<rootDir></rootDir>"
               imageUrl: process.env.Image_Url,
           },
         },
-        
       
        
          

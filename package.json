@@ -17,8 +17,9 @@
   "dependencies": {
     "@pinia/nuxt": "^0.4.6",
     "defu": "^6.1.2",
-   "v3-infinite-loading": "^1.2.2"
-    },
+    "v3-infinite-loading": "^1.2.2",
+    "vue-select": "^4.0.0-beta.6"
+  },
   "overrides": {
     "vue": "latest"
   }
