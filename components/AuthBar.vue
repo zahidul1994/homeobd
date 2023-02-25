@@ -24,9 +24,9 @@
         <div class="hidden md:block">
           <ul class="flex space-x-8 text-sm font-sans">
             <li><NuxtLink to="/" class="active border-b-2 border-blue-500 pb-1">হোম</NuxtLink></li>
-            <li><NuxtLink to="/doctor/find-disease" class="">ব্যাধি</NuxtLink></li>
-            <li><NuxtLink to="/doctor/find-medicine" class="">ঔষধ</NuxtLink></li>
-            <li><NuxtLink to="/doctor/find-symptom" class="">উপসর্গ</NuxtLink></li>
+            <li><NuxtLink to="/doctor/find-disease" class="border-b-2 border-blue-500 pb-1">ব্যাধি</NuxtLink></li>
+            <li><NuxtLink to="/doctor/find-medicine" class="border-b-2 border-blue-500 pb-1">ঔষধ</NuxtLink></li>
+            <li><NuxtLink to="/doctor/find-symptom" class="border-b-2 border-blue-500 pb-1">উপসর্গ</NuxtLink></li>
          <li><NuxtLink to="/doctor/prescription"> প্রেসক্রিপশন</NuxtLink></li>
             <li><NuxtLink to="/" class="cta bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded text-white font-semibold">লগ আউট</NuxtLink></li>
           </ul>

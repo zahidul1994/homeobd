@@ -4,8 +4,11 @@
       class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md shadow dark:bg-gray-800 dark:border-gray-700"
       v-for="sym in symptom" :key="sym.id">
       <div class="p-5">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ sym.symptom }}</h5>
-          <div class="text-gray-700 text-base" v-for=" dis in JSON.parse(sym.medicines)" :key="dis.id">{{ dis }}</div>
+          <h2 class="mb-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-white">{{ sym.symptom }}</h2>
+          
+          <div  v-for=" dis in JSON.parse(sym.medicines)" :key="dis.id"><NuxtLink class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" >
+            {{ dis }}
+    </NuxtLink></div>
       
       </div>
     </div>
@@ -21,12 +24,18 @@ definePageMeta({
   layout: 'default'
 })
 useHead({
-  title: 'Symptom ',
-  meta: [{ name: 'রোগ', content: 'মানব দেহের রোগ সমূহ' }],
+  title: 'লক্ষন বা  উপসর্গ',
+  meta: [{ name: 'রোগ', content: 'মানব দেহের বিভিন্ন রোগের লক্ষন বা  উপসর্গ' }],
   bodyAttrs: { class: 'Index' },
 
 });
 
+useSchemaOrg([
+  defineWebSite({
+    name: useRoute().params,
+  }),
+  defineWebPage(),
+]);
 let symptom = ref([]);
 let page = 1;
 const load = async $state => {

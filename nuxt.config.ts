@@ -6,10 +6,11 @@ export default defineNuxtConfig({
       head: {
         charset: 'utf-8',
         viewport: 'width=device-width, initial-scale=1',
-        title: 'Homeo BD',
         meta: [
-         { name: 'description', content: 'First Bangla Homeo Software' }
-        ],
+            { property: "og:type", content: 'Website' },
+            { property: "og:site_name", content: "Homeo BD" },
+            { property: "fb:app_id", content: "288667377910255" }
+        ], 
       },
       
     },
@@ -30,11 +31,17 @@ assets:"/<rootDir></rootDir>"
   
         modules: [
           '@nuxt/image-edge',
-          '@pinia/nuxt'
-        ],
-        build: {
-         
-      },
+          '@pinia/nuxt',
+          '@nuxtjs/web-vitals',
+          'nuxt-schema-org'
+         ],
+          schemaOrg: {
+            host: 'https://homeobd.com',
+          },
+
+      webVitals: {  
+          ga: { id: 'G-X89S389C53' } 
+         },
         runtimeConfig: {
           
           public: {

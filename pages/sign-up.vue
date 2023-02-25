@@ -6,15 +6,41 @@
       </p>
     </div>
     <form @submit.prevent="onSubmit">
-      
       <div class="form-group mb-6">
-        <label for="exampleInputEmail2" class="form-label inline-block mb-2 text-gray-700">Select Disease</label>
-        <v-select  multiple v-model="form.disease" :options="diseaseinfo" label=diseasename :reduce="diseasename=>diseasename.diseasename" required id="diseasename"  ></v-select> 
+        <label for="exampleInputEmail2" class="form-label inline-block mb-2 text-gray-700">Email address</label>
+        <input v-model="form.email" type="email" class="form-control block
+      w-full
+      px-3
+      py-1.5
+      text-base
+      font-normal
+      text-gray-700
+      bg-white bg-clip-padding
+      border border-solid border-gray-300
+      rounded
+      transition
+      ease-in-out
+      m-0
+      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInputEmail2"
+          aria-describedby="emailHelp" placeholder="Enter email">
+
       </div>
-     
       <div class="form-group mb-6">
         <label for="exampleInputPassword2" class="form-label inline-block mb-2 text-gray-700">Password</label>
-        <input v-model="form.password" type="password" class="form-control e" id="exampleInputPassword2"
+        <input v-model="form.password" type="password" class="form-control block
+      w-full
+      px-3
+      py-1.5
+      text-base
+      font-normal
+      text-gray-700
+      bg-white bg-clip-padding
+      border border-solid border-gray-300
+      rounded
+      transition
+      ease-in-out
+      m-0
+      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInputPassword2"
           placeholder="Password">
 
       </div>
@@ -37,30 +63,23 @@
     transition
     duration-150
     ease-in-out">Sign in</button>
-   
     </form>
 
-    
     <span v-if="isLoading">Loading...</span>
     <span v-else>Sign in</span>
   </div>
 </template>
-  
-  <script setup>
- import 'vue-select/dist/vue-select.css';
-import vSelect from 'vue-select'
-  definePageMeta({
-   layout: "doctor",
-  //  middleware: "auth",
-   });
-  useHead({
-  title: 'doctor ',
-  meta: [{ name: 'doctor', content: 'doctor' }],
-
+<script setup>
+definePageMeta({
+  layout: 'default'
+})
+useHead({
+  title: 'Login ',
+  meta: [{ name: 'Login', content: 'Login' }],
+  bodyAttrs: { class: 'Index' },
 
 });
 
-const  diseaseinfo = await $fetch(useRuntimeConfig().baseUrl+'/alldiseasename');
 const isLoading = ref(false);
 const _error = ref(null);
 const form = reactive({
